@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catch me </title>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+    }
+    #btn{
+        background-color: lightblue;
+        border: 0;
+        border-radius: 5px;
+        height:50px;
+        width: 150px;
+        position: relative;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+   <button id="btn" onclick="changePositin(this)"> Catch me </button>
+   <script>
+    function changePositin(pos){
+    pos.style.top=getRandom(0,(window.innerHeight-pos.offsetHeight))+'px';
+    pos.style.left=getRandom(0,(window.innerWidth-pos.offsetWidth))+'px';
+
+    // document.write(getRandom(0, 1280))
+}
+function getRandom(min,max){
+    min=Math.ceil(min);
+    max=Math.floor(max);
+    return Math.floor(Math.random() *(max-min))+min;
+}
+ </script>
+</body>
+</html>
